@@ -8,7 +8,7 @@ from langchain_core.prompts import PromptTemplate
 from langchain_core.runnables import RunnableParallel, RunnablePassthrough, RunnableLambda
 from langchain_core.output_parsers import StrOutputParser
 
-key = st.secrets['google-key']
+key = st.secrets['Y-key']
 # llm model
 llm = ChatGoogleGenerativeAI(api_key=key, model='gemini-1.5-flash', temparature=0.2)
 embeddings = GoogleGenerativeAIEmbeddings(google_api_key=key, model="models/embedding-001")
@@ -109,4 +109,5 @@ if youtube_link:
             st.write(result)
                 
         else:
+
             st.error("Please check the link.")
