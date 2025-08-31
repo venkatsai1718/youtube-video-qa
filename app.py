@@ -8,7 +8,7 @@ from langchain_core.prompts import PromptTemplate
 from langchain_core.runnables import RunnableParallel, RunnablePassthrough, RunnableLambda
 from langchain_core.output_parsers import StrOutputParser
 
-key = st.secrets["Y-key"]
+key = st.secrets["Y_key"]
 
 # llm model
 llm = ChatGoogleGenerativeAI(api_key=key, model='gemini-1.5-flash', temparature=0.2)
@@ -112,6 +112,7 @@ if youtube_link:
         else:
 
             st.error("Please check the link.")
+
 
 
 
