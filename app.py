@@ -7,6 +7,7 @@ from langchain_community.vectorstores import FAISS
 from langchain_core.prompts import PromptTemplate
 from langchain_core.runnables import RunnableParallel, RunnablePassthrough, RunnableLambda
 from langchain_core.output_parsers import StrOutputParser
+import os
 
 key = os.environ["Y-key"]
 
@@ -112,4 +113,5 @@ if youtube_link:
         else:
 
             st.error("Please check the link.")
+
 
